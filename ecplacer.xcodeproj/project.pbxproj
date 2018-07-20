@@ -11,6 +11,9 @@
 		4F76F55B20F8A6F100A9E3B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F76F55A20F8A6F100A9E3B8 /* Assets.xcassets */; };
 		4F76F55E20F8A6F100A9E3B8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F76F55C20F8A6F100A9E3B8 /* MainMenu.xib */; };
 		4F76F56120F8A6F100A9E3B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F76F56020F8A6F100A9E3B8 /* main.m */; };
+		4F76F56A20F8AE3E00A9E3B8 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F76F56920F8AE3E00A9E3B8 /* VideoViewController.m */; };
+		4F76F56D20F8AEAA00A9E3B8 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F76F56C20F8AEAA00A9E3B8 /* CustomView.m */; };
+		4F76F57020F8AEEA00A9E3B8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F76F56F20F8AEEA00A9E3B8 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,11 @@
 		4F76F55F20F8A6F100A9E3B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F76F56020F8A6F100A9E3B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F76F56220F8A6F100A9E3B8 /* ecplacer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ecplacer.entitlements; sourceTree = "<group>"; };
+		4F76F56820F8AE3E00A9E3B8 /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		4F76F56920F8AE3E00A9E3B8 /* VideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		4F76F56B20F8AEAA00A9E3B8 /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		4F76F56C20F8AEAA00A9E3B8 /* CustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		4F76F56F20F8AEEA00A9E3B8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F76F57020F8AEEA00A9E3B8 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,7 @@
 			children = (
 				4F76F55620F8A6F000A9E3B8 /* ecplacer */,
 				4F76F55520F8A6F000A9E3B8 /* Products */,
+				4F76F56E20F8AEE900A9E3B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,8 +71,20 @@
 				4F76F55F20F8A6F100A9E3B8 /* Info.plist */,
 				4F76F56020F8A6F100A9E3B8 /* main.m */,
 				4F76F56220F8A6F100A9E3B8 /* ecplacer.entitlements */,
+				4F76F56820F8AE3E00A9E3B8 /* VideoViewController.h */,
+				4F76F56920F8AE3E00A9E3B8 /* VideoViewController.m */,
+				4F76F56B20F8AEAA00A9E3B8 /* CustomView.h */,
+				4F76F56C20F8AEAA00A9E3B8 /* CustomView.m */,
 			);
 			path = ecplacer;
+			sourceTree = "<group>";
+		};
+		4F76F56E20F8AEE900A9E3B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F76F56F20F8AEEA00A9E3B8 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +118,11 @@
 				TargetAttributes = {
 					4F76F55320F8A6F000A9E3B8 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -135,7 +162,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F76F56120F8A6F100A9E3B8 /* main.m in Sources */,
+				4F76F56D20F8AEAA00A9E3B8 /* CustomView.m in Sources */,
 				4F76F55920F8A6F000A9E3B8 /* AppDelegate.m in Sources */,
+				4F76F56A20F8AE3E00A9E3B8 /* VideoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +295,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ecplacer/ecplacer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6PADQ4GAPY;
@@ -275,6 +303,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = devicenull.de.ecplacer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -284,7 +313,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ecplacer/ecplacer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6PADQ4GAPY;
@@ -293,6 +321,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = devicenull.de.ecplacer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
