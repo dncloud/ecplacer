@@ -1,6 +1,6 @@
 # Eurocircuits eC-Placer Camera Viewer for MacOS
 
-![ecplacer](/ecplacer.jpg?raw=true "ecplacer")
+![ecplacer](/ecplacer.png?raw=true "ecplacer")
 
 ### Support
 - macOS High Sierra Version 10.13.x
