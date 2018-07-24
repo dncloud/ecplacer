@@ -21,6 +21,7 @@
         <viewController id="BfZ-RF-ZxW" customClass="VideoViewController">
             <connections>
                 <outlet property="startButton" destination="Qbk-Tz-bEy" id="cRI-Gh-A2t"/>
+                <outlet property="statusText" destination="eCy-Og-xKX" id="N69-mP-Jo2"/>
                 <outlet property="stopButton" destination="BYv-RJ-WTD" id="08Y-OI-GDx"/>
                 <outlet property="view" destination="gH7-7E-iDc" id="VhO-Md-52h"/>
             </connections>
@@ -721,21 +722,15 @@
                         <rect key="frame" x="0.0" y="29" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
-                    <popUpButton fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmS-gf-x22">
-                        <rect key="frame" x="719" y="6" width="300" height="18"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eCy-Og-xKX">
+                        <rect key="frame" x="518" y="7" width="504" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <popUpButtonCell key="cell" type="bevel" title="Select your camera..." bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" pullsDown="YES" selectedItem="i4g-4U-118" id="fFD-Oj-XfM">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" size="11" name=".AppleSystemUIFont"/>
-                            <menu key="menu" id="h18-Sj-1YL">
-                                <items>
-                                    <menuItem title="Select your camera..." state="on" hidden="YES" id="i4g-4U-118"/>
-                                    <menuItem title="Item 2" id="AaD-yk-wCL"/>
-                                    <menuItem title="Item 3" id="bce-sh-m7g"/>
-                                </items>
-                            </menu>
-                        </popUpButtonCell>
-                    </popUpButton>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Label" id="BiH-zD-ilH">
+                            <font key="font" metaFont="system" size="11"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
             <point key="canvasLocation" x="140" y="292.5"/>

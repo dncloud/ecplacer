@@ -16,10 +16,11 @@
     AVCaptureOutput *image_output;
 }
 
-@property (nonatomic, retain) AVCaptureVideoPreviewLayer *preview_layer;
+@property (nonatomic, retain) AVCaptureVideoPreviewLayer *previewLayer;
 @property (nonatomic, retain) CustomView *customView1;
 @property (nonatomic, retain) IBOutlet NSButton *startButton;
 @property (nonatomic, retain) IBOutlet NSButton *stopButton;
+@property (nonatomic, retain) IBOutlet NSTextField *statusText;
 
 -(IBAction)start_click:(id)sender;
 -(IBAction)stop_click:(id)sender;
